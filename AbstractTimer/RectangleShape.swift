@@ -35,6 +35,7 @@ class RectangleShape: UIView
     
     lazy var contentText: UILabel = {
         let contentText = UILabel()
+        contentText.textAlignment = .center
         contentText.numberOfLines = 0
         contentText.lineBreakMode = .byWordWrapping
         
@@ -47,7 +48,6 @@ class RectangleShape: UIView
     
     init(color: UIColor)
     {
-        self.color = color
         super.init(frame: CGRect(x: 0, y: 0, width: width, height: height))
         self.backgroundColor = color
     }
@@ -65,7 +65,6 @@ class RectangleShape: UIView
     {
         self.height = height
         self.width = width
-        self.color = color
         
         super.init(frame: CGRect(x: 0, y: 0, width: width, height: height))
         self.backgroundColor = color

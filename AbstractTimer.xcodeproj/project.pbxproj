@@ -19,6 +19,7 @@
 		C3A98B6E2672AAEC00770D63 /* RectangleShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A98B6D2672AAEC00770D63 /* RectangleShape.swift */; };
 		C3A98B702672ACC200770D63 /* SquareShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A98B6F2672ACC200770D63 /* SquareShape.swift */; };
 		C3A98B722672BCAD00770D63 /* AbstractTimerViewController+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A98B712672BCAD00770D63 /* AbstractTimerViewController+Constraints.swift */; };
+		C3A98B742675635B00770D63 /* AbstractTimerViewController+Logic.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A98B732675635B00770D63 /* AbstractTimerViewController+Logic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		C3A98B6D2672AAEC00770D63 /* RectangleShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleShape.swift; sourceTree = "<group>"; };
 		C3A98B6F2672ACC200770D63 /* SquareShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareShape.swift; sourceTree = "<group>"; };
 		C3A98B712672BCAD00770D63 /* AbstractTimerViewController+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AbstractTimerViewController+Constraints.swift"; sourceTree = "<group>"; };
+		C3A98B732675635B00770D63 /* AbstractTimerViewController+Logic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AbstractTimerViewController+Logic.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 				C3A98B6D2672AAEC00770D63 /* RectangleShape.swift */,
 				C3A98B6F2672ACC200770D63 /* SquareShape.swift */,
 				C3A98B712672BCAD00770D63 /* AbstractTimerViewController+Constraints.swift */,
+				C3A98B732675635B00770D63 /* AbstractTimerViewController+Logic.swift */,
 			);
 			path = AbstractTimer;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3A98B742675635B00770D63 /* AbstractTimerViewController+Logic.swift in Sources */,
 				C3A98B3F2672A52900770D63 /* AbstractTimerViewController.swift in Sources */,
 				C3A98B6E2672AAEC00770D63 /* RectangleShape.swift in Sources */,
 				C3A98B722672BCAD00770D63 /* AbstractTimerViewController+Constraints.swift in Sources */,

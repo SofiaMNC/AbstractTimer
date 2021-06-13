@@ -10,6 +10,19 @@ import SnapKit
 
 class AbstractTimerViewController: UIViewController
 {
+    var leadingConstraint: ConstraintMakerEditable?
+    var trailingConstraint: ConstraintMakerEditable?
+    
+    var timer: Timer?
+    
+    lazy var formatter: DateComponentsFormatter = {
+        let formatter = DateComponentsFormatter()
+        formatter.unitsStyle = .positional // Use the appropriate positioning for the current locale
+        formatter.allowedUnits = [ .hour, .minute, .second ] // Units to display in the formatted string
+        formatter.zeroFormattingBehavior = [ .pad ] // Pad with zeroes where appropriate for the locale
+        return formatter
+    }()
+    
     // One red square 170 x 170
     lazy var redSquare: SquareShape = {
         let redSquare = SquareShape(dimension: 170, withColor: UIColor.red)
@@ -28,6 +41,10 @@ class AbstractTimerViewController: UIViewController
         whiteRectangle.contentText.text = "White Rectangle (20 offset)"
         whiteRectangle.contentText.font = UIFont.preferredFont(forTextStyle: .body)
         whiteRectangle.contentText.adjustsFontForContentSizeCategory = true
+        
+        let gesture = UILongPressGestureRecognizer(target: self, action:  #selector(self.pressAction(sender:)))
+        whiteRectangle.addGestureRecognizer(gesture)
+        
         view.addSubview(whiteRectangle)
         
         return whiteRectangle
@@ -39,6 +56,10 @@ class AbstractTimerViewController: UIViewController
         purpleRectangle.contentText.text = "Purple Rectangle"
         purpleRectangle.contentText.font = UIFont.preferredFont(forTextStyle: .caption2)
         purpleRectangle.contentText.adjustsFontForContentSizeCategory = true
+        
+        let gesture = UILongPressGestureRecognizer(target: self, action:  #selector(self.pressAction(sender:)))
+        purpleRectangle.addGestureRecognizer(gesture)
+        
         view.addSubview(purpleRectangle)
         
         return purpleRectangle
@@ -56,24 +77,27 @@ class AbstractTimerViewController: UIViewController
         return blueSquare
     }()
     
-    /*lazy var abstractTimer: UILabel = {
+    lazy var abstractTimer: UILabel = {
         let abstractTimer = UILabel(frame: .zero)
-        abstractTimer.text = "00:10"
+        abstractTimer.text = "00:10:00.0000"
+        // TODO: Use monospaced font while respecting accessibility
+        abstractTimer.font = UIFont.monospacedDigitSystemFont(ofSize: 15, weight: .regular)
         abstractTimer.font = UIFont.preferredFont(forTextStyle: .title3)
         abstractTimer.adjustsFontForContentSizeCategory = true
+        abstractTimer.textColor = UIColor.white
         view.addSubview(abstractTimer)
         
         return abstractTimer
-    }()*/
+    }()
     
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
-        view.backgroundColor = UIColor.orange
+        view.backgroundColor = UIColor.black
         setUpConstraints()
-        //startTimer()
+        startTimer()
     }
 }
 
