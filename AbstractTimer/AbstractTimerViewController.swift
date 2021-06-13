@@ -26,7 +26,8 @@ class AbstractTimerViewController: UIViewController
     // One red square 170 x 170
     lazy var redSquare: SquareShape = {
         let redSquare = SquareShape(dimension: 170, withColor: UIColor.red)
-        redSquare.contentText.text = "Red Square (170x170)"
+        redSquare.contentText.text = NSLocalizedString("Red Square (170x170)",
+                                                       comment: "The label text for the top left square")
         redSquare.contentText.font = UIFont.preferredFont(forTextStyle: .body)
         redSquare.contentText.adjustsFontForContentSizeCategory = true
         redSquare.contentText.textAlignment = .left
@@ -38,7 +39,8 @@ class AbstractTimerViewController: UIViewController
     // One white rectangle
     lazy var whiteRectangle: RectangleShape = {
         let whiteRectangle = RectangleShape(color: UIColor.white)
-        whiteRectangle.contentText.text = "White Rectangle (20 offset)"
+        whiteRectangle.contentText.text = NSLocalizedString("White Rectangle (20 offset)",
+                                                            comment: "The label text for the largest middle rectangle")
         whiteRectangle.contentText.font = UIFont.preferredFont(forTextStyle: .body)
         whiteRectangle.contentText.adjustsFontForContentSizeCategory = true
         
@@ -53,7 +55,8 @@ class AbstractTimerViewController: UIViewController
     // One purple rectangle
     lazy var purpleRectangle: RectangleShape = {
         let purpleRectangle = RectangleShape(color: UIColor.purple)
-        purpleRectangle.contentText.text = "Purple Rectangle"
+        purpleRectangle.contentText.text = NSLocalizedString("Purple Rectangle",
+                                                             comment: "The label text for the smallest middle rectangle")
         purpleRectangle.contentText.font = UIFont.preferredFont(forTextStyle: .caption2)
         purpleRectangle.contentText.adjustsFontForContentSizeCategory = true
         
@@ -68,7 +71,8 @@ class AbstractTimerViewController: UIViewController
     // One blue square 120 x 120
     lazy var blueSquare: SquareShape = {
         let blueSquare = SquareShape(dimension: 120, withColor: UIColor.blue)
-        blueSquare.contentText.text = "Blue Square (120x120)"
+        blueSquare.contentText.text = NSLocalizedString("Blue Square (120x120)",
+                                                        comment: "The label text for the bottom right square")
         blueSquare.contentText.font = UIFont.preferredFont(forTextStyle: .body)
         blueSquare.contentText.adjustsFontForContentSizeCategory = true
         blueSquare.contentText.textAlignment = .right
@@ -79,7 +83,6 @@ class AbstractTimerViewController: UIViewController
     
     lazy var abstractTimer: UILabel = {
         let abstractTimer = UILabel(frame: .zero)
-        abstractTimer.text = "00:10:00.0000"
         // TODO: Use monospaced font while respecting accessibility
         abstractTimer.font = UIFont.monospacedDigitSystemFont(ofSize: 15, weight: .regular)
         abstractTimer.font = UIFont.preferredFont(forTextStyle: .title3)
