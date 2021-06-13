@@ -37,12 +37,12 @@ extension AbstractTimerViewController
         if sender.state == .began
         {
             updateConstraintsForPress()
-            startTimer()
         }
         else if sender.state == .ended
         {
             updateConstraintsForRelease()
-            startTimer()
         }
+        
+        startTimer()
     }
 }

@@ -21,6 +21,7 @@
 		C3A98B722672BCAD00770D63 /* AbstractTimerViewController+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A98B712672BCAD00770D63 /* AbstractTimerViewController+Constraints.swift */; };
 		C3A98B742675635B00770D63 /* AbstractTimerViewController+Logic.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A98B732675635B00770D63 /* AbstractTimerViewController+Logic.swift */; };
 		C3A98B792676496300770D63 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C3A98B7B2676496300770D63 /* Localizable.strings */; };
+		C3A98B7E2676605C00770D63 /* StringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A98B7D2676605C00770D63 /* StringConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		C3A98B762676491700770D63 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		C3A98B7A2676496300770D63 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C3A98B7C2676497800770D63 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C3A98B7D2676605C00770D63 /* StringConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 				C3A98B6F2672ACC200770D63 /* SquareShape.swift */,
 				C3A98B712672BCAD00770D63 /* AbstractTimerViewController+Constraints.swift */,
 				C3A98B732675635B00770D63 /* AbstractTimerViewController+Logic.swift */,
+				C3A98B7D2676605C00770D63 /* StringConstants.swift */,
 			);
 			path = AbstractTimer;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 				C3A98B3F2672A52900770D63 /* AbstractTimerViewController.swift in Sources */,
 				C3A98B6E2672AAEC00770D63 /* RectangleShape.swift in Sources */,
 				C3A98B722672BCAD00770D63 /* AbstractTimerViewController+Constraints.swift in Sources */,
+				C3A98B7E2676605C00770D63 /* StringConstants.swift in Sources */,
 				C3A98B3B2672A52900770D63 /* AppDelegate.swift in Sources */,
 				C3A98B702672ACC200770D63 /* SquareShape.swift in Sources */,
 				C3A98B3D2672A52900770D63 /* SceneDelegate.swift in Sources */,

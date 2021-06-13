@@ -33,7 +33,8 @@ class RectangleShape: UIView
         }
     }
     
-    lazy var contentText: UILabel = {
+    lazy var contentText: UILabel =
+    {
         let contentText = UILabel()
         contentText.textAlignment = .center
         contentText.numberOfLines = 0
