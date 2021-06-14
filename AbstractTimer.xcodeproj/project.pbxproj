@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C3926FFD26779E8E008FCF27 /* AbstractTimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3926FFC26779E8E008FCF27 /* AbstractTimerViewModel.swift */; };
+		C39270002677A00F008FCF27 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3926FFF2677A00F008FCF27 /* Box.swift */; };
 		C3A98B3B2672A52900770D63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A98B3A2672A52900770D63 /* AppDelegate.swift */; };
 		C3A98B3D2672A52900770D63 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A98B3C2672A52900770D63 /* SceneDelegate.swift */; };
 		C3A98B3F2672A52900770D63 /* AbstractTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A98B3E2672A52900770D63 /* AbstractTimerViewController.swift */; };
@@ -19,7 +21,6 @@
 		C3A98B6E2672AAEC00770D63 /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A98B6D2672AAEC00770D63 /* Rectangle.swift */; };
 		C3A98B702672ACC200770D63 /* Square.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A98B6F2672ACC200770D63 /* Square.swift */; };
 		C3A98B722672BCAD00770D63 /* AbstractTimerViewController+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A98B712672BCAD00770D63 /* AbstractTimerViewController+Constraints.swift */; };
-		C3A98B742675635B00770D63 /* AbstractTimerViewController+Logic.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A98B732675635B00770D63 /* AbstractTimerViewController+Logic.swift */; };
 		C3A98B792676496300770D63 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C3A98B7B2676496300770D63 /* Localizable.strings */; };
 		C3A98B7E2676605C00770D63 /* StringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A98B7D2676605C00770D63 /* StringConstants.swift */; };
 		C3A98B842676AB0000770D63 /* HasAccessibleTextContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A98B832676AB0000770D63 /* HasAccessibleTextContent.swift */; };
@@ -44,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C3926FFC26779E8E008FCF27 /* AbstractTimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractTimerViewModel.swift; sourceTree = "<group>"; };
+		C3926FFF2677A00F008FCF27 /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 		C3A98B372672A52900770D63 /* AbstractTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AbstractTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3A98B3A2672A52900770D63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3A98B3C2672A52900770D63 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,7 +64,6 @@
 		C3A98B6D2672AAEC00770D63 /* Rectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rectangle.swift; sourceTree = "<group>"; };
 		C3A98B6F2672ACC200770D63 /* Square.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Square.swift; sourceTree = "<group>"; };
 		C3A98B712672BCAD00770D63 /* AbstractTimerViewController+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AbstractTimerViewController+Constraints.swift"; sourceTree = "<group>"; };
-		C3A98B732675635B00770D63 /* AbstractTimerViewController+Logic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AbstractTimerViewController+Logic.swift"; sourceTree = "<group>"; };
 		C3A98B752676491700770D63 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
 		C3A98B762676491700770D63 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		C3A98B7A2676496300770D63 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -97,6 +99,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C3926FFE2677A006008FCF27 /* Uitlities */ = {
+			isa = PBXGroup;
+			children = (
+				C3926FFF2677A00F008FCF27 /* Box.swift */,
+			);
+			path = Uitlities;
+			sourceTree = "<group>";
+		};
+		C39270012677A1E7008FCF27 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C3A98B3E2672A52900770D63 /* AbstractTimerViewController.swift */,
+				C3A98B712672BCAD00770D63 /* AbstractTimerViewController+Constraints.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		C3A98B2E2672A52900770D63 = {
 			isa = PBXGroup;
 			children = (
@@ -120,10 +139,13 @@
 		C3A98B392672A52900770D63 /* AbstractTimer */ = {
 			isa = PBXGroup;
 			children = (
-				C3A98B872676B38600770D63 /* Protocols */,
+				C3A98B822676A6B600770D63 /* Storyboards */,
 				C3A98B7F2676A55100770D63 /* Model */,
 				C3A98B802676A57B00770D63 /* Views */,
-				C3A98B812676A66C00770D63 /* Controllers */,
+				C39270012677A1E7008FCF27 /* ViewControllers */,
+				C3A98B812676A66C00770D63 /* ViewModels */,
+				C3A98B872676B38600770D63 /* Protocols */,
+				C3926FFE2677A006008FCF27 /* Uitlities */,
 				C3A98B3A2672A52900770D63 /* AppDelegate.swift */,
 				C3A98B3C2672A52900770D63 /* SceneDelegate.swift */,
 				C3A98B432672A52A00770D63 /* Assets.xcassets */,
@@ -162,21 +184,18 @@
 		C3A98B802676A57B00770D63 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C3A98B822676A6B600770D63 /* Storyboards */,
-				C3A98B712672BCAD00770D63 /* AbstractTimerViewController+Constraints.swift */,
-				C3A98B3E2672A52900770D63 /* AbstractTimerViewController.swift */,
 				C3A98B6D2672AAEC00770D63 /* Rectangle.swift */,
 				C3A98B6F2672ACC200770D63 /* Square.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		C3A98B812676A66C00770D63 /* Controllers */ = {
+		C3A98B812676A66C00770D63 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				C3A98B732675635B00770D63 /* AbstractTimerViewController+Logic.swift */,
+				C3926FFC26779E8E008FCF27 /* AbstractTimerViewModel.swift */,
 			);
-			path = Controllers;
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		C3A98B822676A6B600770D63 /* Storyboards */ = {
@@ -335,14 +354,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3A98B742675635B00770D63 /* AbstractTimerViewController+Logic.swift in Sources */,
 				C3A98B3F2672A52900770D63 /* AbstractTimerViewController.swift in Sources */,
 				C3A98B6E2672AAEC00770D63 /* Rectangle.swift in Sources */,
 				C3A98B722672BCAD00770D63 /* AbstractTimerViewController+Constraints.swift in Sources */,
 				C3A98B7E2676605C00770D63 /* StringConstants.swift in Sources */,
 				C3A98B862676B2A900770D63 /* HasTextContent.swift in Sources */,
+				C39270002677A00F008FCF27 /* Box.swift in Sources */,
 				C3A98B842676AB0000770D63 /* HasAccessibleTextContent.swift in Sources */,
 				C3A98B3B2672A52900770D63 /* AppDelegate.swift in Sources */,
+				C3926FFD26779E8E008FCF27 /* AbstractTimerViewModel.swift in Sources */,
 				C3A98B702672ACC200770D63 /* Square.swift in Sources */,
 				C3A98B3D2672A52900770D63 /* SceneDelegate.swift in Sources */,
 			);

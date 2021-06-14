@@ -189,32 +189,19 @@ extension AbstractTimerViewController
      NB: Since we are using SnapKit's updateConstraints so as to not have to remake all constraints,
         only the offset can be updated. The constraints must otherwise remain as-is.
      */
-    func updateConstraintsForPress()
+    func updateConstraintsForTap()
     {
-        whiteRectangle.snp.updateConstraints
-        {
-            make
-            in
-            leadingConstraint = make.leading.equalTo(self.view.safeAreaLayoutGuide).offset(redSquare.width)
-            trailingConstraint = make.trailing.equalTo(self.view.safeAreaLayoutGuide).offset(-blueSquare.width)
-        }
-    }
+        let newLeadingValue = resized ? spacingValue : redSquare.width
+        let newTrailingValue = resized ? spacingValue : blueSquare.width
     
-    /**
-    The white rectangle must now return to its original constraints.
-        - Returns: NA
-     
-     NB: Since we are using SnapKit's updateConstraints so as to not have to remake all constraints,
-        only the offset can be updated. The constraints must otherwise remain as-is.
-     */
-    func updateConstraintsForRelease()
-    {
         whiteRectangle.snp.updateConstraints
         {
             make
             in
-            leadingConstraint = make.leading.equalTo(self.view.safeAreaLayoutGuide).offset(spacingValue)
-            trailingConstraint = make.trailing.equalTo(self.view.safeAreaLayoutGuide).offset(-spacingValue)
+            leadingConstraint = make.leading.equalTo(self.view.safeAreaLayoutGuide).offset(newLeadingValue)
+            trailingConstraint = make.trailing.equalTo(self.view.safeAreaLayoutGuide).offset(-newTrailingValue)
         }
+        
+        resized = !resized
     }
 }

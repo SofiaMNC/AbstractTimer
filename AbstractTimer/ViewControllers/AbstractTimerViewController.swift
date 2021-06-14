@@ -19,6 +19,9 @@ import SnapKit
 class AbstractTimerViewController: UIViewController
 {
     // MARK: - Properties
+    private let viewModel = AbstractTimerViewModel()
+    
+    var resized: Bool = false
     
     /// Used thoughout for the regular positioning of the view
     let spacingValue = 20
@@ -26,21 +29,6 @@ class AbstractTimerViewController: UIViewController
     /// Constraints that will vary on touch event
     var leadingConstraint: ConstraintMakerEditable?
     var trailingConstraint: ConstraintMakerEditable?
-    
-    /// Timer to start / restart on loading and touch event
-    var timer: Timer?
-    
-    /// Formatter used to display timer hour, minute and second count with the
-    /// appropriate positioning and 0-padding for the current locale.
-    /// NB: millisecond is not an NSCalendar.Unit
-    lazy var formatter: DateComponentsFormatter =
-    {
-        let formatter = DateComponentsFormatter()
-        formatter.unitsStyle = .positional
-        formatter.allowedUnits = [ .hour, .minute, .second ]
-        formatter.zeroFormattingBehavior = [ .pad ]
-        return formatter
-    }()
     
     /// One red Square with dimensions 170 x 170. Content is left-aligned and accessible.
     lazy var redSquare: Square =
@@ -68,7 +56,7 @@ class AbstractTimerViewController: UIViewController
         whiteRectangle.setUpAccessibilityWith(text: StringConstants.MainScreen.WhiteRectangle.accessibilityLabel,
                                               andHint: StringConstants.MainScreen.WhiteRectangle.accessibilityHint)
         
-        let gesture = UILongPressGestureRecognizer(target: self,
+        let gesture = UITapGestureRecognizer(target: self,
                                                    action: #selector(self.pressAction(sender:)))
         whiteRectangle.addGestureRecognizer(gesture)
         
@@ -89,7 +77,7 @@ class AbstractTimerViewController: UIViewController
         purpleRectangle.setUpAccessibilityWith(text: StringConstants.MainScreen.PurpleRectangle.accessibilityLabel,
                                                andHint: StringConstants.MainScreen.PurpleRectangle.accessibilityHint)
         
-        let gesture = UILongPressGestureRecognizer(target: self,
+        let gesture = UITapGestureRecognizer(target: self,
                                                    action: #selector(self.pressAction(sender:)))
         purpleRectangle.addGestureRecognizer(gesture)
         
@@ -145,7 +133,41 @@ class AbstractTimerViewController: UIViewController
         
         view.backgroundColor = UIColor.black
         setUpConstraints()
-        startTimer()
+        
+        viewModel.timerLabel.bind
+        {
+            [weak self] timerLabel
+            in
+            self?.abstractTimer.text = timerLabel
+        }
+        
+        viewModel.startTimer()
+    }
+    
+    /**
+    Updating constraints and start timer on long press and release of long press
+        - Parameter sender: the long press gesture recognizer
+        - Returns: NA
+     */
+    @objc func pressAction(sender : UITapGestureRecognizer)
+    {
+        updateConstraintsForTap()
+        
+        viewModel.startTimer()
+    }
+    
+    /**
+    Hide the purple Rectangle when in landscape mode.
+        - Parameter newCollection: The traits to be applied to the container.
+        - Parameter coordinator: The transition coordinator object managing the trait change.
+        - Returns: NA
+     */
+    override func willTransition(to newCollection: UITraitCollection,
+                                 with coordinator: UIViewControllerTransitionCoordinator)
+    {
+        super.willTransition(to: newCollection, with: coordinator)
+        
+        purpleRectangle.isHidden = UIDevice.current.orientation.isLandscape
     }
 }
 
