@@ -1,16 +1,23 @@
-//
-//  StringConstants.swift
-//  AbstractTimer
-//
-//  Created by Sofia Chevrolat on 13/06/2021.
-//
+/**
+#  StringConstants.swift
+   AbstractTimer
+
+ **Created by Sofia Chevrolat on 06/13/21.*
+ **Copyright © 2021 madimedia. All rights reserved.*
+
+ ## Overview
+All the app's string constants, grouped by screen and views.
+ 
+ */
 
 import Foundation
 
 struct StringConstants
 {
+    /// The string litterals for the main screen AbstractTimerViewController
     struct MainScreen
     {
+        /// The string litterals for the AbstractTimerVC's red Square
         struct RedSquare
         {
             static let label = NSLocalizedString("Red Square (170x170)",
@@ -19,6 +26,7 @@ struct StringConstants
                                                               comment: "The accessibility label text for the top left square")
         }
         
+        /// The string litterals for the AbstractTimerVC's white Rectangle
         struct WhiteRectangle
         {
             static let label = NSLocalizedString("White Rectangle (20 offset)",
@@ -30,6 +38,7 @@ struct StringConstants
 
         }
         
+        /// The string litterals for the AbstractTimerVC's purple Rectangle
         struct PurpleRectangle
         {
             static let label = NSLocalizedString("Purple Rectangle",
@@ -40,6 +49,7 @@ struct StringConstants
                                                              comment: "Describing what can be done with the purple rectangle")
         }
         
+        /// The string litterals for the AbstractTimerVC's blue Square
         struct BlueSquare
         {
             static let label = NSLocalizedString("Blue Square (120x120)",
@@ -48,10 +58,11 @@ struct StringConstants
                                                               comment: "The accessibility label text for the bottom right square")
         }
         
+        /// The string litterals for the AbstractTimerVC's timer UILabel
         struct AbstractTimer
         {
-            static let accessibilityLabel = NSLocalizedString("Timer with hours, minutes, seconds and milliseconds. Restart by long pressing the white or purple rectangle, and by releasing the white or purple rectangle (middle of the screen)",
-                                                              comment: "The accessibility label for the timer")
+            static let accessibilityHint = NSLocalizedString("Timer with hours, minutes, seconds and milliseconds. Restart by long pressing the white or purple rectangle, and by releasing the white or purple rectangle (middle of the screen)",
+                                                              comment: "The accessibility hint for the timer")
         }
     }
 }
