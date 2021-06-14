@@ -132,6 +132,7 @@ class AbstractTimerViewController: UIViewController
         super.viewDidLoad()
         
         view.backgroundColor = UIColor.black
+        
         setUpConstraints()
         
         viewModel.timerLabel.bind
@@ -152,6 +153,8 @@ class AbstractTimerViewController: UIViewController
     @objc func pressAction(sender : UITapGestureRecognizer)
     {
         updateConstraintsForTap()
+        
+        resized = !resized
         
         viewModel.startTimer()
     }

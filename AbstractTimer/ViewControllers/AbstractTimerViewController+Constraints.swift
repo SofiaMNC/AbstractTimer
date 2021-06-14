@@ -41,19 +41,12 @@ extension AbstractTimerViewController
         }
         
         /** The red Square's label should :
-         - have a leading constraint of 10 with regards to the red Square's leading edge
-         - have a trailing constraint of 10 with regards to the red Square's trailing edge
+         - have a leading constraint of 20 with regards to the red Square's leading edge
+         - have a trailing constraint of 20 with regards to the red Square's trailing edge
          - be vertically centered inside the red Square
         */
-        redSquare.contentText.snp.makeConstraints
-        {
-            make
-            in
-            make.leading.equalTo(redSquare.snp.leading).offset(spacingValue/2)
-            make.trailing.equalTo(redSquare.snp.trailing).offset(-spacingValue/2)
-            make.centerY.equalToSuperview()
-        }
-        
+        setLabelConstraintsFor(redSquare)
+            
         
         // Constraints for the blue Square
         // Must be located in the bottom right corner
@@ -76,14 +69,7 @@ extension AbstractTimerViewController
          - have a trailing constraint of 20 with regards to the blue Square's trailing edge
          - be vertically centered inside the blue Square
         */
-        blueSquare.contentText.snp.makeConstraints
-        {
-            make
-            in
-            make.trailing.equalTo(blueSquare.snp.trailing).offset(-spacingValue)
-            make.leading.equalTo(blueSquare.snp.leading).offset(spacingValue)
-            make.centerY.equalToSuperview()
-        }
+        setLabelConstraintsFor(blueSquare)
         
         
         // Constraints for the white Rectangle
@@ -107,20 +93,11 @@ extension AbstractTimerViewController
         }
         
         /** The white Rectangle's label should:
-         - be horizontally centered
-         - be vertically centered
-         - have a trailing constraint of 20 with regards to the white Rectangle's trailing edge
+         - be horizontally and vertically centered
          - have a leading constraint of 20 with regards to the white Rectangle's leading edge
+         - have a trailing constraint of 20 with regards to the white Rectangle's trailing edge
         */
-        whiteRectangle.contentText.snp.makeConstraints
-        {
-            make
-            in
-            make.centerX.equalToSuperview()
-            make.centerY.equalToSuperview()
-            make.trailing.equalTo(whiteRectangle.snp.trailing).offset(-spacingValue)
-            make.leading.equalTo(whiteRectangle.snp.leading).offset(spacingValue)
-        }
+        setLabelConstraintsFor(whiteRectangle, asLargeAsPossible: false)
         
         
         // Constraints for the purple rectangle
@@ -142,24 +119,16 @@ extension AbstractTimerViewController
             make.leading.equalTo(whiteRectangle).offset(spacingValue)
             make.trailing.equalTo(whiteRectangle).offset(-spacingValue)
             make.top.equalTo(whiteRectangle.contentText.snp.bottom).offset(spacingValue).priority(.medium)
-            make.bottom.equalTo(whiteRectangle.snp.bottom).offset(-spacingValue).priority(.medium)
+            make.bottom.equalTo(whiteRectangle).offset(-spacingValue).priority(.medium)
         }
         
         /** The purple Rectangle's label should:
          - be horizontally centered
          - be vertically centered
-         - have a trailing constraint of 20 with regards to the purple Rectangle's trailing edge
          - have a leading constraint of 20 with regards to the purple Rectangle's leading edge
+         - have a trailing constraint of 20 with regards to the purple Rectangle's trailing edge
         */
-        purpleRectangle.contentText.snp.makeConstraints
-        {
-            make
-            in
-            make.centerX.equalToSuperview()
-            make.centerY.equalToSuperview()
-            make.trailing.equalTo(purpleRectangle.snp.trailing).offset(-spacingValue)
-            make.leading.equalTo(purpleRectangle.snp.leading).offset(spacingValue)
-        }
+        setLabelConstraintsFor(purpleRectangle)
         
         
         // Constraints for the timer label
@@ -178,10 +147,41 @@ extension AbstractTimerViewController
         }
     }
     
+    /**
+     Set the constraints for label inside a HasAccessibleTextContent protocol-conforming shape.
+     - Parameter shape: an HasAccessibleTextContent protocol-conforming shape
+     - Parameter yCenteredOnly: only y center the text. By default, text is x- and y-centered.
+     - Returns: NA
+    */
+    func setLabelConstraintsFor(_ shape: HasAccessibleTextContent, asLargeAsPossible largest: Bool = true)
+    {
+        shape.contentText.snp.makeConstraints
+        {
+            make
+            in
+            
+            if largest
+            {
+                let cgfloatSpacingValue = CGFloat(spacingValue)
+                
+                make.edges.equalToSuperview().inset(UIEdgeInsets(top: cgfloatSpacingValue,
+                                                                 left: cgfloatSpacingValue,
+                                                                 bottom: cgfloatSpacingValue,
+                                                                 right: cgfloatSpacingValue))
+            }
+            else
+            {
+                make.center.equalToSuperview()
+                make.leading.equalToSuperview().offset(spacingValue)
+                make.trailing.equalToSuperview().offset(-spacingValue)
+            }
+        }
+    }
+    
     // MARK: - Updating constraints for touch events
     
     /**
-    The white rectangle must now have:
+    If resized, the white rectangle must have:
      - its leading edge aligned with the red Square's traililng edge
      - its trailing edge aligned with the blue Square's leading edge
         - Returns: NA
@@ -201,7 +201,5 @@ extension AbstractTimerViewController
             leadingConstraint = make.leading.equalTo(self.view.safeAreaLayoutGuide).offset(newLeadingValue)
             trailingConstraint = make.trailing.equalTo(self.view.safeAreaLayoutGuide).offset(-newTrailingValue)
         }
-        
-        resized = !resized
     }
 }
