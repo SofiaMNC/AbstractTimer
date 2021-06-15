@@ -31,9 +31,9 @@ struct StringConstants
         {
             static let label = NSLocalizedString("White Rectangle (20 offset)",
                                                  comment: "The label text for the largest middle rectangle")
-            static let accessibilityLabel = NSLocalizedString("White Rectangle (20 offset). Can be longpressed",
+            static let accessibilityLabel = NSLocalizedString("White Rectangle (20 offset). Can be tapped",
                                                               comment: "The accessibility label text for the smallest middle rectangle")
-            static let accessibilityHint = NSLocalizedString("Long pressing this shape will reshape it as well as the purple rectangle inside it, and restart the timer until you release your press, at which point the view goes back to normal and the timer restarts.",
+            static let accessibilityHint = NSLocalizedString("A tap on this shape will make it resize, as well as the purple rectangle it contains, and restart the timer.",
                                                              comment: "The accessibility hint describing what can be done with the white rectangle")
 
         }
@@ -43,9 +43,9 @@ struct StringConstants
         {
             static let label = NSLocalizedString("Purple Rectangle",
                                                  comment: "The label text for the smallest middle rectangle")
-            static let accessibilityLabel = NSLocalizedString("Purple Rectangle. This rectangle will disappear in landscape mode. Can be longpressed.",
+            static let accessibilityLabel = NSLocalizedString("Purple Rectangle. This rectangle will disappear in landscape mode. Can be tapped.",
                                                               comment: "The accessibility label text for the smallest middle rectangle")
-            static let accessibilityHint = NSLocalizedString("Long pressing this shape will reshape it as well as the white rectangle around it, and restart the timer until you release your press, at which point the view goes back to normal and the timer restarts.",
+            static let accessibilityHint = NSLocalizedString("A tap on this shape will make it resize, as well as the white rectangle around it, and restart the timer.",
                                                              comment: "Describing what can be done with the purple rectangle")
         }
         
@@ -61,7 +61,7 @@ struct StringConstants
         /// The string litterals for the AbstractTimerVC's timer UILabel
         struct AbstractTimer
         {
-            static let accessibilityHint = NSLocalizedString("Timer with hours, minutes, seconds and milliseconds. Restart by long pressing the white or purple rectangle, and by releasing the white or purple rectangle (middle of the screen)",
+            static let accessibilityHint = NSLocalizedString("Timer with hours, minutes, seconds and milliseconds. Restart by tapping the white or purple rectangle (middle of the screen)",
                                                               comment: "The accessibility hint for the timer")
         }
     }
