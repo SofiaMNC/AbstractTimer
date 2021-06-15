@@ -22,6 +22,7 @@ protocol HasAccessibleTextContent : HasTextContent
         - Parameter hint: the string to use as accessibility hint
         - Returns: NA
      */
-    func setUpAccessibilityWith(text label: String,
+    func setUpAccessibilityWith(identifier ID: String,
+                                text label: String,
                                 andHint hint: String)
 }

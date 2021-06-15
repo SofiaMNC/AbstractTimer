@@ -38,8 +38,9 @@ class AbstractTimerViewController: UIViewController
         redSquare.setUpContentWith(text: StringConstants.MainScreen.RedSquare.label,
                                    aligned: .left)
         
-        redSquare.setUpAccessibilityWith(text: StringConstants.MainScreen.RedSquare.accessibilityLabel)
-        
+        redSquare.setUpAccessibilityWith(identifier: "RedSquare",
+                                         text: StringConstants.MainScreen.RedSquare.accessibilityLabel)
+                
         view.addSubview(redSquare)
         
         return redSquare
@@ -53,7 +54,8 @@ class AbstractTimerViewController: UIViewController
         
         whiteRectangle.setUpContentWith(text: StringConstants.MainScreen.WhiteRectangle.label)
         
-        whiteRectangle.setUpAccessibilityWith(text: StringConstants.MainScreen.WhiteRectangle.accessibilityLabel,
+        whiteRectangle.setUpAccessibilityWith(identifier: "WhiteRectangle",
+                                              text: StringConstants.MainScreen.WhiteRectangle.accessibilityLabel,
                                               andHint: StringConstants.MainScreen.WhiteRectangle.accessibilityHint)
         
         let gesture = UITapGestureRecognizer(target: self,
@@ -74,7 +76,8 @@ class AbstractTimerViewController: UIViewController
         purpleRectangle.setUpContentWith(text: StringConstants.MainScreen.PurpleRectangle.label,
                                          aligned: .center, andStyledAs: .caption2)
         
-        purpleRectangle.setUpAccessibilityWith(text: StringConstants.MainScreen.PurpleRectangle.accessibilityLabel,
+        purpleRectangle.setUpAccessibilityWith(identifier: "PurpleRectangle",
+                                               text: StringConstants.MainScreen.PurpleRectangle.accessibilityLabel,
                                                andHint: StringConstants.MainScreen.PurpleRectangle.accessibilityHint)
         
         let gesture = UITapGestureRecognizer(target: self,
@@ -94,7 +97,8 @@ class AbstractTimerViewController: UIViewController
         blueSquare.setUpContentWith(text: StringConstants.MainScreen.BlueSquare.label,
                                     aligned: .right)
         
-        blueSquare.setUpAccessibilityWith(text: StringConstants.MainScreen.BlueSquare.accessibilityLabel)
+        blueSquare.setUpAccessibilityWith(identifier: "BlueSquare",
+                                          text: StringConstants.MainScreen.BlueSquare.accessibilityLabel)
         view.addSubview(blueSquare)
         
         return blueSquare
@@ -113,6 +117,7 @@ class AbstractTimerViewController: UIViewController
                                                                                             UIFontDescriptor.FeatureKey.featureIdentifier: kNumberSpacingType,
                                                                                             .typeIdentifier: kMonospacedNumbersSelector]]]),
                                    size: 0)
+        abstractTimer.textAlignment = .center
         abstractTimer.adjustsFontForContentSizeCategory = true
         abstractTimer.textColor = UIColor.white
         view.addSubview(abstractTimer)
@@ -130,6 +135,8 @@ class AbstractTimerViewController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
+        view.accessibilityIdentifier = "MainWindow"
         
         view.backgroundColor = UIColor.black
         

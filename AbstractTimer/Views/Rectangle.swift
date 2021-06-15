@@ -86,8 +86,9 @@ class Rectangle: UIView, HasAccessibleTextContent
         - Parameter hint: the string to use as accessibility hint
         - Returns: NA
      */
-    func setUpAccessibilityWith(text label: String, andHint hint: String = "")
+    func setUpAccessibilityWith(identifier ID: String, text label: String, andHint hint: String = "")
     {
+        self.accessibilityIdentifier = ID
         contentText.isAccessibilityElement = true
         contentText.accessibilityLabel = label
         contentText.accessibilityHint = hint
