@@ -1,16 +1,20 @@
-//
-//  AbstractTimerTests.swift
-//  AbstractTimerTests
-//
-//  Created by Sofia Chevrolat on 10/06/2021.
-//
+/**
+#  AbstractTimerViewControllerTests.swift
+   AbstractTimer
+ 
+ ## Overview
+ Testing AbstractTimerViewController
+ 
+*/
 
 import XCTest
 @testable import AbstractTimer
 
 
-class AbstractTimerTests: XCTestCase
+class AbstractTimerViewControllerTests: XCTestCase
 {
+    // MARK: - Properties
+    
     var sut: AbstractTimerViewController!
     var redSquare: Square!
     var whiteRectangle: Rectangle!
@@ -18,10 +22,16 @@ class AbstractTimerTests: XCTestCase
     var blueSquare: Square!
     var abstractTimer: UILabel!
     
+    let redSquareSide: CGFloat = 170
+    let blueSquareSide: CGFloat = 120
+    
+    
+    // MARK: - Set Up & Tear Down
     
     override func setUpWithError() throws
     {
         try super.setUpWithError()
+        
         sut = AbstractTimerViewController()
         redSquare = sut.redSquare
         whiteRectangle = sut.whiteRectangle
@@ -38,30 +48,18 @@ class AbstractTimerTests: XCTestCase
         purpleRectangle = nil
         blueSquare = nil
         abstractTimer = nil
+        
         try super.tearDownWithError()
     }
 
     
-    // MARK: - Testing Starting Configuration
+    // MARK: - Testing View Configuration
     
-    func testViewIsInStartingConfiguration()
-    {
-        // given our view controller
-        
-        // when
-        sut.viewDidLoad()
-        
-        // then
-        XCTAssertFalse(sut.resized,
-                       "Main screen is not in starting configuration")
-    }
-    
-    func testRedSquareStartingConfigurationIsCorrect()
+    func testRedSquareConfigurationIsCorrect()
     {
         // given our controller
         
-        // when
-        sut.viewDidLoad()
+        // when starting
         
         // then
         XCTAssertEqual(redSquare.backgroundColor, UIColor.red,
@@ -88,19 +86,18 @@ class AbstractTimerTests: XCTestCase
                        StringConstants.MainScreen.RedSquare.accessibilityLabel,
                        "Red square's accessibility label is incorrect")
         
-        XCTAssertEqual(redSquare.constraint(for: .leading)?.constant, nil,
-                       "Red square's leading constraint is incorrect")
+        XCTAssertEqual(redSquare.bounds.width, redSquareSide,
+                       "Red square has wrong width")
         
-        XCTAssertEqual(redSquare.constraint(for: .top)?.constant, nil,
-                       "Red square's top constraint is incorrect")
+        XCTAssertEqual(redSquare.bounds.height, redSquareSide,
+                       "Red square has wrong height")
     }
     
-    func testWhiteRectangleStartingConfigurationIsCorrect()
+    func testWhiteRectangleConfigurationIsCorrect()
     {
         // given our controller
         
-        // when
-        sut.viewDidLoad()
+        // when starting
         
         // then
         XCTAssertEqual(whiteRectangle.backgroundColor, UIColor.white,
@@ -133,26 +130,13 @@ class AbstractTimerTests: XCTestCase
         XCTAssertEqual(whiteRectangle.contentText.accessibilityHint,
                        StringConstants.MainScreen.WhiteRectangle.accessibilityHint,
                        "White Rectangle's accessibility hint is incorrect")
-        
-        XCTAssertEqual(whiteRectangle.constraint(for: .leading)?.constant, 20,
-                       "White Rectangle leading constraint is incorrect")
-        
-        XCTAssertEqual(whiteRectangle.constraint(for: .top)?.constant, 20,
-                       "White Rectangle's top constraint is incorrect")
-        
-        XCTAssertEqual(whiteRectangle.constraint(for: .trailing)?.constant, -20,
-                       "White Rectangle trailing constraint is incorrect")
-        
-        XCTAssertEqual(whiteRectangle.constraint(for: .bottom)?.constant, -20,
-                       "White Rectangle's bottom constraint is incorrect")
     }
     
-    func testPurpleRectangleStartingConfigurationIsCorrect()
+    func testPurpleRectangleConfigurationIsCorrect()
     {
         // given our controller
         
-        // when
-        sut.viewDidLoad()
+        // when starting
         
         // then
         XCTAssertEqual(purpleRectangle.backgroundColor, UIColor.purple,
@@ -185,26 +169,13 @@ class AbstractTimerTests: XCTestCase
         XCTAssertEqual(purpleRectangle.contentText.accessibilityHint,
                        StringConstants.MainScreen.PurpleRectangle.accessibilityHint,
                        "Purple Rectangle's accessibility hint is incorrect")
-        
-        XCTAssertEqual(purpleRectangle.constraint(for: .leading)?.constant, 20,
-                       "Purple Rectangle leading constraint is incorrect")
-        
-        XCTAssertEqual(purpleRectangle.constraint(for: .top)?.constant, 20,
-                       "Purple Rectangle's top constraint is incorrect")
-        
-        XCTAssertEqual(purpleRectangle.constraint(for: .trailing)?.constant, -20,
-                       "Purple Rectangle trailing constraint is incorrect")
-        
-        XCTAssertEqual(purpleRectangle.constraint(for: .bottom)?.constant, -20,
-                       "Purple Rectangle's bottom constraint is incorrect")
     }
     
-    func testBlueSquareStartingConfigurationIsCorrect()
+    func testBlueSquareConfigurationIsCorrect()
     {
         // given our controller
         
-        // when
-        sut.viewDidLoad()
+        // when starting
         
         // then
         XCTAssertEqual(blueSquare.backgroundColor, UIColor.blue,
@@ -231,25 +202,18 @@ class AbstractTimerTests: XCTestCase
                        StringConstants.MainScreen.BlueSquare.accessibilityLabel,
                        "Blue square's accessibility label is incorrect")
         
-        XCTAssertEqual(blueSquare.bounds.width, 120,
+        XCTAssertEqual(blueSquare.bounds.width, blueSquareSide,
                        "Blue square has wrong width")
         
-        XCTAssertEqual(blueSquare.bounds.height, 120,
+        XCTAssertEqual(blueSquare.bounds.height, blueSquareSide,
                        "Blue square has wrong height")
-        
-        XCTAssertEqual(blueSquare.constraint(for: .trailing)?.constant, nil,
-                       "Blue square's trailing constraint is incorrect")
-        
-        XCTAssertEqual(blueSquare.constraint(for: .bottom)?.constant, nil,
-                       "Blue square's bottom constraint is incorrect")
     }
     
     func testTimerStartingConfigurationIsCorrect()
     {
         // given our controller
         
-        // when
-        sut.viewDidLoad()
+        // when starting
         
         // then
         XCTAssertEqual(abstractTimer.text, "00:00:00.000",

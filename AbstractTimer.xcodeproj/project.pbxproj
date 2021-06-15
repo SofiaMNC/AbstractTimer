@@ -11,14 +11,14 @@
 		C39270002677A00F008FCF27 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3926FFF2677A00F008FCF27 /* Box.swift */; };
 		C39270332677ECB5008FCF27 /* RectangleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39270322677ECB5008FCF27 /* RectangleTests.swift */; };
 		C39270362677F4A7008FCF27 /* SquareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39270352677F4A7008FCF27 /* SquareTests.swift */; };
-		C392703C26782F5B008FCF27 /* UIView+Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C392703B26782F5A008FCF27 /* UIView+Constraint.swift */; };
+		C392703E267849A1008FCF27 /* AbstractTimerViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C392703D267849A1008FCF27 /* AbstractTimerViewModelTests.swift */; };
 		C3A98B3B2672A52900770D63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A98B3A2672A52900770D63 /* AppDelegate.swift */; };
 		C3A98B3D2672A52900770D63 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A98B3C2672A52900770D63 /* SceneDelegate.swift */; };
 		C3A98B3F2672A52900770D63 /* AbstractTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A98B3E2672A52900770D63 /* AbstractTimerViewController.swift */; };
 		C3A98B422672A52900770D63 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3A98B402672A52900770D63 /* Main.storyboard */; };
 		C3A98B442672A52A00770D63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3A98B432672A52A00770D63 /* Assets.xcassets */; };
 		C3A98B472672A52A00770D63 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3A98B452672A52A00770D63 /* LaunchScreen.storyboard */; };
-		C3A98B522672A52A00770D63 /* AbstractTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A98B512672A52A00770D63 /* AbstractTimerTests.swift */; };
+		C3A98B522672A52A00770D63 /* AbstractTimerViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A98B512672A52A00770D63 /* AbstractTimerViewControllerTests.swift */; };
 		C3A98B5D2672A52A00770D63 /* AbstractTimerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A98B5C2672A52A00770D63 /* AbstractTimerUITests.swift */; };
 		C3A98B6C2672A5FA00770D63 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C3A98B6B2672A5FA00770D63 /* SnapKit */; };
 		C3A98B6E2672AAEC00770D63 /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A98B6D2672AAEC00770D63 /* Rectangle.swift */; };
@@ -52,7 +52,7 @@
 		C3926FFF2677A00F008FCF27 /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 		C39270322677ECB5008FCF27 /* RectangleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleTests.swift; sourceTree = "<group>"; };
 		C39270352677F4A7008FCF27 /* SquareTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareTests.swift; sourceTree = "<group>"; };
-		C392703B26782F5A008FCF27 /* UIView+Constraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraint.swift"; sourceTree = "<group>"; };
+		C392703D267849A1008FCF27 /* AbstractTimerViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractTimerViewModelTests.swift; sourceTree = "<group>"; };
 		C3A98B372672A52900770D63 /* AbstractTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AbstractTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3A98B3A2672A52900770D63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3A98B3C2672A52900770D63 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,7 +62,7 @@
 		C3A98B462672A52A00770D63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C3A98B482672A52A00770D63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C3A98B4D2672A52A00770D63 /* AbstractTimerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AbstractTimerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C3A98B512672A52A00770D63 /* AbstractTimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractTimerTests.swift; sourceTree = "<group>"; };
+		C3A98B512672A52A00770D63 /* AbstractTimerViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractTimerViewControllerTests.swift; sourceTree = "<group>"; };
 		C3A98B532672A52A00770D63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C3A98B582672A52A00770D63 /* AbstractTimerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AbstractTimerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3A98B5C2672A52A00770D63 /* AbstractTimerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractTimerUITests.swift; sourceTree = "<group>"; };
@@ -163,9 +163,10 @@
 		C3A98B502672A52A00770D63 /* AbstractTimerTests */ = {
 			isa = PBXGroup;
 			children = (
+				C392703D267849A1008FCF27 /* AbstractTimerViewModelTests.swift */,
 				C39270352677F4A7008FCF27 /* SquareTests.swift */,
 				C39270322677ECB5008FCF27 /* RectangleTests.swift */,
-				C3A98B512672A52A00770D63 /* AbstractTimerTests.swift */,
+				C3A98B512672A52A00770D63 /* AbstractTimerViewControllerTests.swift */,
 				C3A98B532672A52A00770D63 /* Info.plist */,
 			);
 			path = AbstractTimerTests;
@@ -194,7 +195,6 @@
 			children = (
 				C3A98B6D2672AAEC00770D63 /* Rectangle.swift */,
 				C3A98B6F2672ACC200770D63 /* Square.swift */,
-				C392703B26782F5A008FCF27 /* UIView+Constraint.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -366,7 +366,6 @@
 				C3A98B3F2672A52900770D63 /* AbstractTimerViewController.swift in Sources */,
 				C3A98B6E2672AAEC00770D63 /* Rectangle.swift in Sources */,
 				C3A98B722672BCAD00770D63 /* AbstractTimerViewController+Constraints.swift in Sources */,
-				C392703C26782F5B008FCF27 /* UIView+Constraint.swift in Sources */,
 				C3A98B7E2676605C00770D63 /* StringConstants.swift in Sources */,
 				C3A98B862676B2A900770D63 /* HasTextContent.swift in Sources */,
 				C39270002677A00F008FCF27 /* Box.swift in Sources */,
@@ -382,8 +381,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C392703E267849A1008FCF27 /* AbstractTimerViewModelTests.swift in Sources */,
 				C39270362677F4A7008FCF27 /* SquareTests.swift in Sources */,
-				C3A98B522672A52A00770D63 /* AbstractTimerTests.swift in Sources */,
+				C3A98B522672A52A00770D63 /* AbstractTimerViewControllerTests.swift in Sources */,
 				C39270332677ECB5008FCF27 /* RectangleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

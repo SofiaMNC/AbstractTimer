@@ -1,9 +1,11 @@
-//
-//  RectangleTests.swift
-//  AbstractTimerTests
-//
-//  Created by Sofia Chevrolat on 14/06/2021.
-//
+/**
+#  RectangleTests.swift
+   AbstractTimer
+ 
+ ## Overview
+ Testing Rectangle class
+ 
+*/
 
 import XCTest
 @testable import AbstractTimer
@@ -11,13 +13,17 @@ import XCTest
 
 class RectangleTests: XCTestCase
 {
+    // MARK: - Properties
+    
     var sut: Rectangle!
     let descriptionText = "I'm a rectangle"
     let accessibilityID = "TestID"
-    let accessibilityLabelText = "I'm a rectangle"
+    let accessibilityLabelText = "I'm an accessible rectangle"
     let accessibilityHintText = "No action possible"
     
 
+    // MARK: - Set Up & Tear Down
+    
     override func setUpWithError() throws
     {
         try super.setUpWithError()
@@ -100,7 +106,7 @@ class RectangleTests: XCTestCase
     }
     
     
-    // MARK: - Testing func setUpAccessibilityWith(text:andHint)
+    // MARK: - Testing func setUpAccessibilityWith(identifier:text:andHint)
     
     func testContentElementIsAccessible()
     {

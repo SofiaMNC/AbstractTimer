@@ -1,9 +1,11 @@
-//
-//  SquareTests.swift
-//  AbstractTimerTests
-//
-//  Created by Sofia Chevrolat on 14/06/2021.
-//
+/**
+#  SquareTests.swift
+   AbstractTimer
+ 
+ ## Overview
+ Testing Square class
+ 
+*/
 
 import XCTest
 @testable import AbstractTimer
@@ -11,7 +13,12 @@ import XCTest
 
 class SquareTests: XCTestCase
 {
+    // MARK: - Properties
+    
     var sut: Square!
+    
+    
+    // MARK: - Set Up & Tear Down
     
     override func setUpWithError() throws
     {
@@ -24,8 +31,9 @@ class SquareTests: XCTestCase
         sut = nil
         try super.tearDownWithError()
     }
+    
 
-    // MARK: - Testing that width = height at all time
+    // MARK: - Testing that width = height at all times
     
     func testHeightIsAlwaysEqualToWidth()
     {
