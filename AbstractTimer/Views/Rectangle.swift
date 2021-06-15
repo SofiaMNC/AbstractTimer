@@ -82,6 +82,7 @@ class Rectangle: UIView, HasAccessibleTextContent
     
     /**
     Set up accessibility of the content by providing minimum accessibility information.
+        - Parameter ID: the string to use as accessiblity identifier
         - Parameter label: the string to use as accessibility label
         - Parameter hint: the string to use as accessibility hint
         - Returns: NA

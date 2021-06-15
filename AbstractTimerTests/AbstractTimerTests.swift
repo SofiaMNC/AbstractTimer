@@ -88,12 +88,6 @@ class AbstractTimerTests: XCTestCase
                        StringConstants.MainScreen.RedSquare.accessibilityLabel,
                        "Red square's accessibility label is incorrect")
         
-        XCTAssertEqual(redSquare.bounds.width, 170,
-                       "Red square has wrong width")
-        
-        XCTAssertEqual(redSquare.bounds.height, 170,
-                       "Red square has wrong height")
-        
         XCTAssertEqual(redSquare.constraint(for: .leading)?.constant, nil,
                        "Red square's leading constraint is incorrect")
         

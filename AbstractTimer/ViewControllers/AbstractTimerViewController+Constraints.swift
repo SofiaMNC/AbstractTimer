@@ -41,8 +41,8 @@ extension AbstractTimerViewController
         }
         
         /** The red Square's label should :
-         - have a leading constraint of 20 with regards to the red Square's leading edge
-         - have a trailing constraint of 20 with regards to the red Square's trailing edge
+         - have a leading constraint of _spacingValue_ with regards to the red Square's leading edge
+         - have a trailing constraint of _spacingValue_ with regards to the red Square's trailing edge
          - be vertically centered inside the red Square
         */
         setLabelConstraintsFor(redSquare)
@@ -65,8 +65,8 @@ extension AbstractTimerViewController
         }
         
         /** The blue Square's label should:
-         - have a leading constraint of 20 with regards to the blue Square's leading edge
-         - have a trailing constraint of 20 with regards to the blue Square's trailing edge
+         - have a leading constraint of _spacingValue_ with regards to the blue Square's leading edge
+         - have a trailing constraint of _spacingValue_ with regards to the blue Square's trailing edge
          - be vertically centered inside the blue Square
         */
         setLabelConstraintsFor(blueSquare)
@@ -77,10 +77,10 @@ extension AbstractTimerViewController
         // from all other shapes and boundaries
 
         /** The white Rectangle should have:
-         - a top constraint of 20 with regards to the bottom of the red Square
-         - a leading constraint of 20 with regards to the leading edge of the safe area
-         - a trailing constraint of 20 with regards to the trailing edge of the safe area
-         - a bottom constraint of 20 with regards to the top of the blue Square
+         - a top constraint of _spacingValue_ with regards to the bottom of the red Square
+         - a leading constraint of _spacingValue_ with regards to the leading edge of the safe area
+         - a trailing constraint of _spacingValue_ with regards to the trailing edge of the safe area
+         - a bottom constraint of _spacingValue_ with regards to the top of the blue Square
         */
         whiteRectangle.snp.makeConstraints
         {
@@ -94,8 +94,8 @@ extension AbstractTimerViewController
         
         /** The white Rectangle's label should:
          - be horizontally and vertically centered
-         - have a leading constraint of 20 with regards to the white Rectangle's leading edge
-         - have a trailing constraint of 20 with regards to the white Rectangle's trailing edge
+         - have a leading constraint of _spacingValue_ with regards to the white Rectangle's leading edge
+         - have a trailing constraint of _spacingValue_ with regards to the white Rectangle's trailing edge
         */
         setLabelConstraintsFor(whiteRectangle, asLargeAsPossible: false)
         
@@ -104,10 +104,10 @@ extension AbstractTimerViewController
         // Must be located inside the white Rectangle with a 20 pt offset all around
         
         /** The purple Rectangle should have:
-         - a leading constraint of 20 with regards to the white Rectangle's leading edge
-         - a trailing constraint of 20 with regards to the white Rectangle's trailing edge
-         - a top constraint of 20 with regards to the bottom edge of the white Rectangle's label.
-         - a bottom constraint of 20 with regards to the white Rectangle's bottom edge.
+         - a leading constraint of _spacingValue_ with regards to the white Rectangle's leading edge
+         - a trailing constraint of _spacingValue_ with regards to the white Rectangle's trailing edge
+         - a top constraint of _spacingValue_ with regards to the bottom edge of the white Rectangle's label.
+         - a bottom constraint of _spacingValue_ with regards to the white Rectangle's bottom edge.
          
          NB: the top and bottom constraints must have a lesser priority than the other constraints since they must yield
             to the other constraints in landscape mode, when the purple rectangle must be hidden.
@@ -125,8 +125,8 @@ extension AbstractTimerViewController
         /** The purple Rectangle's label should:
          - be horizontally centered
          - be vertically centered
-         - have a leading constraint of 20 with regards to the purple Rectangle's leading edge
-         - have a trailing constraint of 20 with regards to the purple Rectangle's trailing edge
+         - have a leading constraint of _spacingValue_ with regards to the purple Rectangle's leading edge
+         - have a trailing constraint of 2_spacingValue_0 with regards to the purple Rectangle's trailing edge
         */
         setLabelConstraintsFor(purpleRectangle)
         
@@ -135,8 +135,8 @@ extension AbstractTimerViewController
         // Must be located on the bottom left corner
         
         /** The timer label should have:
-         - a leading constraint of 20 with regards to the leading edge of the safe area
-         - a bottom constraint of 20 with regards to the bottom edge of the safe area
+         - a leading constraint of _spacingValue_ with regards to the leading edge of the safe area
+         - a bottom constraint of _spacingValue_ with regards to the bottom edge of the safe area
         */
         abstractTimer.snp.makeConstraints
         {
@@ -150,7 +150,7 @@ extension AbstractTimerViewController
     /**
      Set the constraints for label inside a HasAccessibleTextContent protocol-conforming shape.
      - Parameter shape: an HasAccessibleTextContent protocol-conforming shape
-     - Parameter yCenteredOnly: only y center the text. By default, text is x- and y-centered.
+     - Parameter largest: should the label take the whole available space
      - Returns: NA
     */
     func setLabelConstraintsFor(_ shape: HasAccessibleTextContent, asLargeAsPossible largest: Bool = true)

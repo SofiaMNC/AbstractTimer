@@ -42,7 +42,7 @@ class AbstractTimerUITests: XCTestCase
     func testRedSquareInitialConfigIsCorrect()
     {
         let redSquare = app.otherElements["RedSquare"]
-        
+                
         XCTAssertEqual(redSquare.frame.width, redSquare.frame.height,
                        "Red Square is not a square")
         

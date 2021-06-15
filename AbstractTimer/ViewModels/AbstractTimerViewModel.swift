@@ -1,9 +1,11 @@
-//
-//  AbstractTimerViewModel.swift
-//  AbstractTimer
-//
-//  Created by Sofia Chevrolat on 14/06/2021.
-//
+/**
+#  AbstractTimerViewModel.swift
+   AbstractTimer
+ 
+ ## Overview
+ ViewModel to handle the logic of the application.
+ 
+*/
 
 import Foundation
 
@@ -24,6 +26,8 @@ public class AbstractTimerViewModel
     
     /// Timer to start / restart on loading and touch event
     private var timer: Timer?
+    
+    /// Timer label
     let timerLabel = Box("00:00:00.000")
     
     

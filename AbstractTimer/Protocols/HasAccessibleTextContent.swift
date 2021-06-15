@@ -18,9 +18,10 @@ protocol HasAccessibleTextContent : HasTextContent
 {
     /**
     Set up accessibility of the content by providing minimum accessibility information.
-        - Parameter label: the string to use as accessibility label
-        - Parameter hint: the string to use as accessibility hint
-        - Returns: NA
+     - Parameter ID: the string to use as accessiblity identifier
+     - Parameter label: the string to use as accessibility label
+     - Parameter hint: the string to use as accessibility hint
+     - Returns: NA
      */
     func setUpAccessibilityWith(identifier ID: String,
                                 text label: String,

@@ -21,6 +21,7 @@ class AbstractTimerViewController: UIViewController
     // MARK: - Properties
     private let viewModel = AbstractTimerViewModel()
     
+    /// Keeps track of the resizing state of the view
     var resized: Bool = false
     
     /// Used thoughout for the regular positioning of the view
