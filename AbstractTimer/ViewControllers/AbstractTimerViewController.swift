@@ -24,8 +24,10 @@ class AbstractTimerViewController: UIViewController
     /// Keeps track of the resizing state of the view
     var resized: Bool = false
     
-    /// Used thoughout for the regular positioning of the view
+    /// Values for sizing and positioning of the views
     let spacingValue = 20
+    let redSquareSide = 170
+    let blueSquareSide = 120
 
     /// Constraints that will vary on touch event
     var leadingConstraint: ConstraintMakerEditable?
@@ -34,7 +36,7 @@ class AbstractTimerViewController: UIViewController
     /// One red Square with dimensions 170 x 170. Content is left-aligned and accessible.
     lazy var redSquare: Square =
     {
-        let redSquare = Square(color: UIColor.red, side: 170)
+        let redSquare = Square(color: UIColor.red, side: redSquareSide)
         
         redSquare.setUpContentWith(text: StringConstants.MainScreen.RedSquare.label,
                                    aligned: .left)
@@ -93,7 +95,7 @@ class AbstractTimerViewController: UIViewController
     /// One blue square with dimensions 120 x 120. Content is right-aligned and accessible.
     lazy var blueSquare: Square =
     {
-        let blueSquare = Square(color: UIColor.blue, side: 120)
+        let blueSquare = Square(color: UIColor.blue, side: blueSquareSide)
         
         blueSquare.setUpContentWith(text: StringConstants.MainScreen.BlueSquare.label,
                                     aligned: .right)
