@@ -41,7 +41,7 @@ class AbstractTimerViewController: UIViewController
         redSquare.setUpContentWith(text: StringConstants.MainScreen.RedSquare.label,
                                    aligned: .left)
         
-        redSquare.setUpAccessibilityWith(identifier: "RedSquare",
+        redSquare.setUpAccessibilityWith(identifier: StringConstants.MainScreen.RedSquare.accessibilityID,
                                          text: StringConstants.MainScreen.RedSquare.accessibilityLabel)
                 
         view.addSubview(redSquare)
@@ -57,7 +57,7 @@ class AbstractTimerViewController: UIViewController
         
         whiteRectangle.setUpContentWith(text: StringConstants.MainScreen.WhiteRectangle.label)
         
-        whiteRectangle.setUpAccessibilityWith(identifier: "WhiteRectangle",
+        whiteRectangle.setUpAccessibilityWith(identifier: StringConstants.MainScreen.WhiteRectangle.accessibilityID,
                                               text: StringConstants.MainScreen.WhiteRectangle.accessibilityLabel,
                                               andHint: StringConstants.MainScreen.WhiteRectangle.accessibilityHint)
         
@@ -79,7 +79,7 @@ class AbstractTimerViewController: UIViewController
         purpleRectangle.setUpContentWith(text: StringConstants.MainScreen.PurpleRectangle.label,
                                          aligned: .center, andStyledAs: .caption2)
         
-        purpleRectangle.setUpAccessibilityWith(identifier: "PurpleRectangle",
+        purpleRectangle.setUpAccessibilityWith(identifier: StringConstants.MainScreen.PurpleRectangle.accessibilityID,
                                                text: StringConstants.MainScreen.PurpleRectangle.accessibilityLabel,
                                                andHint: StringConstants.MainScreen.PurpleRectangle.accessibilityHint)
         
@@ -100,7 +100,7 @@ class AbstractTimerViewController: UIViewController
         blueSquare.setUpContentWith(text: StringConstants.MainScreen.BlueSquare.label,
                                     aligned: .right)
         
-        blueSquare.setUpAccessibilityWith(identifier: "BlueSquare",
+        blueSquare.setUpAccessibilityWith(identifier: StringConstants.MainScreen.BlueSquare.accessibilityID,
                                           text: StringConstants.MainScreen.BlueSquare.accessibilityLabel)
         view.addSubview(blueSquare)
         

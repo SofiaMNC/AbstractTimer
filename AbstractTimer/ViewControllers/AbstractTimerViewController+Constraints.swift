@@ -73,7 +73,7 @@ extension AbstractTimerViewController
         
         
         // Constraints for the white Rectangle
-        // Must be centered in the screen with a 20 pt offset
+        // Must be centered in the screen with an offset
         // from all other shapes and boundaries
 
         /** The white Rectangle should have:
@@ -101,7 +101,7 @@ extension AbstractTimerViewController
         
         
         // Constraints for the purple rectangle
-        // Must be located inside the white Rectangle with a 20 pt offset all around
+        // Must be located inside the white Rectangle with an offset all around
         
         /** The purple Rectangle should have:
          - a leading constraint of _spacingValue_ with regards to the white Rectangle's leading edge
@@ -126,7 +126,7 @@ extension AbstractTimerViewController
          - be horizontally centered
          - be vertically centered
          - have a leading constraint of _spacingValue_ with regards to the purple Rectangle's leading edge
-         - have a trailing constraint of 2_spacingValue_0 with regards to the purple Rectangle's trailing edge
+         - have a trailing constraint of _spacingValue_ with regards to the purple Rectangle's trailing edge
         */
         setLabelConstraintsFor(purpleRectangle)
         

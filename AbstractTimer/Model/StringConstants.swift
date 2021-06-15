@@ -22,6 +22,9 @@ struct StringConstants
         {
             static let label = NSLocalizedString("Red Square (170x170)",
                                                  comment: "The label text for the top left square")
+            
+            static let accessibilityID = "RedSquare"
+            
             static let accessibilityLabel = NSLocalizedString("Red Square (170x170).",
                                                               comment: "The accessibility label text for the top left square")
         }
@@ -31,6 +34,9 @@ struct StringConstants
         {
             static let label = NSLocalizedString("White Rectangle (20 offset)",
                                                  comment: "The label text for the largest middle rectangle")
+            
+            static let accessibilityID = "WhiteRectangle"
+            
             static let accessibilityLabel = NSLocalizedString("White Rectangle (20 offset). Can be tapped",
                                                               comment: "The accessibility label text for the smallest middle rectangle")
             static let accessibilityHint = NSLocalizedString("A tap on this shape will make it resize, as well as the purple rectangle it contains, and restart the timer.",
@@ -43,8 +49,12 @@ struct StringConstants
         {
             static let label = NSLocalizedString("Purple Rectangle",
                                                  comment: "The label text for the smallest middle rectangle")
+            
+            static let accessibilityID = "PurpleRectangle"
+
             static let accessibilityLabel = NSLocalizedString("Purple Rectangle. This rectangle will disappear in landscape mode. Can be tapped.",
                                                               comment: "The accessibility label text for the smallest middle rectangle")
+            
             static let accessibilityHint = NSLocalizedString("A tap on this shape will make it resize, as well as the white rectangle around it, and restart the timer.",
                                                              comment: "Describing what can be done with the purple rectangle")
         }
@@ -54,6 +64,9 @@ struct StringConstants
         {
             static let label = NSLocalizedString("Blue Square (120x120)",
                                                  comment: "The label text for the bottom right square")
+            
+            static let accessibilityID = "BlueSquare"
+
             static let accessibilityLabel = NSLocalizedString("Blue Square (120x120).",
                                                               comment: "The accessibility label text for the bottom right square")
         }
