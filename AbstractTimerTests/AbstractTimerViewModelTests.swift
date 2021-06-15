@@ -43,7 +43,7 @@ class AbstractTimerViewModelTests: XCTestCase
         
         sut.timerLabel.bind
         {
-            if $0.caseInsensitiveCompare("00:00:04.190") == .orderedSame
+            if $0.compare("00:00:04.190") == .orderedSame
             {
                 expectation.fulfill()
             }

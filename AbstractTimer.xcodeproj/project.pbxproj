@@ -165,10 +165,10 @@
 		C3A98B502672A52A00770D63 /* AbstractTimerTests */ = {
 			isa = PBXGroup;
 			children = (
-				C392703D267849A1008FCF27 /* AbstractTimerViewModelTests.swift */,
 				C39270352677F4A7008FCF27 /* SquareTests.swift */,
 				C39270322677ECB5008FCF27 /* RectangleTests.swift */,
 				C3A98B512672A52A00770D63 /* AbstractTimerViewControllerTests.swift */,
+				C392703D267849A1008FCF27 /* AbstractTimerViewModelTests.swift */,
 				C3A98B532672A52A00770D63 /* Info.plist */,
 			);
 			path = AbstractTimerTests;
