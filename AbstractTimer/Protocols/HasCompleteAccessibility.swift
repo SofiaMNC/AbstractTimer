@@ -16,6 +16,9 @@ import UIKit
 
 protocol HasCompleteAccessibility
 {
+    /// A view for a textual content
+    var contentText: DynamicTypeLabel! { get }
+    
     /**
     Set up accessibility by providing minimum accessibility information.
      - Parameter ID: the string to use as accessiblity identifier

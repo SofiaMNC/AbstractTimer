@@ -23,7 +23,7 @@ class SquareTests: XCTestCase
     override func setUpWithError() throws
     {
         try super.setUpWithError()
-        sut = Square(color: UIColor.white)
+        sut = Square(labelled: DynamicTypeLabel(), withColor: UIColor.white)
     }
 
     override func tearDownWithError() throws

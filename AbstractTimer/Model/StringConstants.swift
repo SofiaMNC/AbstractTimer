@@ -14,6 +14,13 @@ import Foundation
 
 struct StringConstants
 {
+    /// The string litterals used by AbstractTimerLabel
+    struct AbstractTimerLabel
+    {
+        static let defaultLabel = NSLocalizedString("No content provided",
+                                                    comment: "Default value for an AbstractTimerLabel")
+    }
+    
     /// The string litterals for the main screen AbstractTimerViewController
     struct MainScreen
     {

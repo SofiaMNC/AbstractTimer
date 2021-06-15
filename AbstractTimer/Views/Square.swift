@@ -48,13 +48,14 @@ class Square: Rectangle
     
     /**
      Convenience initializer dictating the dimension and color of the Square
+        - Parameter description: the description to display in the Square
         - Parameter color: the color to give the Square
-        - Parameter side: the length of the Square's sides
+        - Parameter side: the length of one of the Square's sides
         - Returns: an instance of a Square with the desired configuration
      */
-    init(color: UIColor, side: Int = 0)
+    init(labelled description: DynamicTypeLabel, withColor color: UIColor, andDimension side: Int = 0)
     {
-        super.init(color: color, height: side, width: side)
+        super.init(labelled: description, withColor: color, height: side, width: side)
     }
     
     /// Required initializer

@@ -36,14 +36,14 @@ class AbstractTimerViewController: UIViewController
     /// One red Square with dimensions 170 x 170. Content is left-aligned and accessible.
     lazy var redSquare: Square =
     {
-        let redSquare = Square(color: UIColor.red, side: redSquareSide)
+        let redSquareLabel = DynamicTypeLabel(withContent: StringConstants.MainScreen.RedSquare.label,
+                                             aligned: .left)
         
-        redSquare.setUpContentWith(text: StringConstants.MainScreen.RedSquare.label,
-                                   aligned: .left)
+        let redSquare = Square(labelled: redSquareLabel, withColor: UIColor.red, andDimension: redSquareSide)
         
         redSquare.setUpAccessibilityWith(identifier: StringConstants.MainScreen.RedSquare.accessibilityID,
                                          text: StringConstants.MainScreen.RedSquare.accessibilityLabel)
-                
+                        
         view.addSubview(redSquare)
         
         return redSquare
@@ -53,16 +53,15 @@ class AbstractTimerViewController: UIViewController
     /// The rectangle reacts on long press.
     lazy var whiteRectangle: Rectangle =
     {
-        let whiteRectangle = Rectangle(color: UIColor.white)
+        let whiteRectangleLabel = DynamicTypeLabel(withContent: StringConstants.MainScreen.WhiteRectangle.label)
         
-        whiteRectangle.setUpContentWith(text: StringConstants.MainScreen.WhiteRectangle.label)
-        
+        let whiteRectangle = Rectangle(labelled: whiteRectangleLabel, withColor: UIColor.white)
+                
         whiteRectangle.setUpAccessibilityWith(identifier: StringConstants.MainScreen.WhiteRectangle.accessibilityID,
                                               text: StringConstants.MainScreen.WhiteRectangle.accessibilityLabel,
                                               andHint: StringConstants.MainScreen.WhiteRectangle.accessibilityHint)
         
-        let gesture = UITapGestureRecognizer(target: self,
-                                                   action: #selector(self.pressAction(sender:)))
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(self.pressAction(sender:)))
         whiteRectangle.addGestureRecognizer(gesture)
         
         view.addSubview(whiteRectangle)
@@ -74,17 +73,17 @@ class AbstractTimerViewController: UIViewController
     /// The rectangle reacts on long press.
     lazy var purpleRectangle: Rectangle =
     {
-        let purpleRectangle = Rectangle(color: UIColor.purple)
+        let purpleRectangleLabel = DynamicTypeLabel(withContent: StringConstants.MainScreen.PurpleRectangle.label,
+                                                   aligned: .center,
+                                                   andStyledAs: .caption2)
         
-        purpleRectangle.setUpContentWith(text: StringConstants.MainScreen.PurpleRectangle.label,
-                                         aligned: .center, andStyledAs: .caption2)
+        let purpleRectangle = Rectangle(labelled: purpleRectangleLabel, withColor: UIColor.purple)
         
         purpleRectangle.setUpAccessibilityWith(identifier: StringConstants.MainScreen.PurpleRectangle.accessibilityID,
                                                text: StringConstants.MainScreen.PurpleRectangle.accessibilityLabel,
                                                andHint: StringConstants.MainScreen.PurpleRectangle.accessibilityHint)
         
-        let gesture = UITapGestureRecognizer(target: self,
-                                                   action: #selector(self.pressAction(sender:)))
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(self.pressAction(sender:)))
         purpleRectangle.addGestureRecognizer(gesture)
         
         view.addSubview(purpleRectangle)
@@ -95,10 +94,10 @@ class AbstractTimerViewController: UIViewController
     /// One blue square with dimensions 120 x 120. Content is right-aligned and accessible.
     lazy var blueSquare: Square =
     {
-        let blueSquare = Square(color: UIColor.blue, side: blueSquareSide)
+        let blueSquareLabel = DynamicTypeLabel(withContent: StringConstants.MainScreen.BlueSquare.label,
+                                              aligned: .right)
         
-        blueSquare.setUpContentWith(text: StringConstants.MainScreen.BlueSquare.label,
-                                    aligned: .right)
+        let blueSquare = Square(labelled: blueSquareLabel, withColor: UIColor.blue, andDimension: blueSquareSide)
         
         blueSquare.setUpAccessibilityWith(identifier: StringConstants.MainScreen.BlueSquare.accessibilityID,
                                           text: StringConstants.MainScreen.BlueSquare.accessibilityLabel)

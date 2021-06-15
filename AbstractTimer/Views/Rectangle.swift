@@ -13,7 +13,7 @@ import Foundation
 import UIKit
 
 
-class Rectangle: UIView, HasTextContent, HasCompleteAccessibility
+class Rectangle: UIView, HasCompleteAccessibility
 {
     // MARK: - Properties
     
@@ -23,62 +23,42 @@ class Rectangle: UIView, HasTextContent, HasCompleteAccessibility
     
     /// The label to house text, in conformance with the HasAccessibleTextContent
     /// protocol
-    lazy var contentText: UILabel =
-    {
-        let contentText = UILabel()
-        contentText.textAlignment = .center
-        contentText.numberOfLines = 0
-        contentText.lineBreakMode = .byWordWrapping
-        
-        self.addSubview(contentText)
-        
-        return contentText
-    }()
+    var contentText: DynamicTypeLabel!
      
     
     // MARK: - Initializers
     
     /**
      Convenience initializer dictating the dimensions and color of the Rectangle
+        - Parameter description: the description to display in the Rectangle
         - Parameter color: the color to give the Rectangle
         - Parameter height: the height of the Rectangle
         - Parameter width: the width of the Rectangle
         - Returns: an instance of a Rectangle with the desired configuration
      */
-    init(color: UIColor, height: Int = 0, width: Int = 0)
+    init(labelled description: DynamicTypeLabel, withColor color: UIColor, height: Int = 0, width: Int = 0)
     {
         super.init(frame: CGRect(x: 0, y: 0, width: width, height: height))
         
         self.height = height
         self.width = width
         self.backgroundColor = color
+        
+        self.contentText = description
+        self.addSubview(contentText)
     }
     
     /// Required initializer
     required init?(coder: NSCoder)
     {
         super.init(coder: coder)
+        
+        self.contentText = DynamicTypeLabel()
+        self.addSubview(contentText)
     }
 
     
     // MARK: - Methods
-    
-    /**
-    Set up the text by providing minimum content and styling information.
-        - Parameter description: the actual text content
-        - Parameter textAlignment: the horizontal text alignment
-        - Parameter textStyle: a dynamic type compatible styling option
-        - Returns: NA
-     */
-    func setUpContentWith(text description: String,
-                          aligned textAlignment: NSTextAlignment = .center,
-                          andStyledAs textStyle: UIFont.TextStyle = .body)
-    {
-        contentText.text = description
-        contentText.font = UIFont.preferredFont(forTextStyle: textStyle)
-        contentText.adjustsFontForContentSizeCategory = true
-        contentText.textAlignment = textAlignment
-    }
     
     /**
     Set up accessibility of the Rectangle by providing minimum accessibility information.

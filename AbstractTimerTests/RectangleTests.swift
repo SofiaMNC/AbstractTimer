@@ -27,7 +27,9 @@ class RectangleTests: XCTestCase
     override func setUpWithError() throws
     {
         try super.setUpWithError()
-        sut = Rectangle(color: UIColor.white)
+        
+        let rectangleLabel = DynamicTypeLabel(withContent: descriptionText)
+        sut = Rectangle(labelled:rectangleLabel, withColor: UIColor.white)
     }
 
     override func tearDownWithError() throws
@@ -36,75 +38,6 @@ class RectangleTests: XCTestCase
         try super.tearDownWithError()
     }
 
-    
-    // MARK: - Testing func setUpContentWith(text:aligned:andStyledAs)
-    
-    func testContentIsSetCorrectly()
-    {
-        // given the description text
-      
-        // when
-        sut.setUpContentWith(text: descriptionText)
-      
-        // then
-        XCTAssertTrue(sut.contentText.text != "",
-                       "Rectangle description text is not set")
-        
-        XCTAssertEqual(sut.contentText.text, descriptionText,
-                       "Rectangle description text is wrong")
-    }
-    
-    func testContentIsSetWithCorrectAlignment()
-    {
-        // given the description text
-        
-        let textAlignments = [NSTextAlignment.left,
-                              NSTextAlignment.right,
-                              NSTextAlignment.center,
-                              NSTextAlignment.justified,
-                              NSTextAlignment.natural]
-        
-        textAlignments.forEach
-        {
-            // when
-            sut.setUpContentWith(text: descriptionText,
-                                 aligned: $0)
-            // then
-            XCTAssertEqual(sut.contentText.textAlignment, $0,
-                           "Alignment is incorrect for \($0)")
-        }
-    }
-    
-    func testContentIsSetWithCorrectStyle()
-    {
-        // given the description text
-                
-        let textStyles = [UIFont.TextStyle.body,
-                          UIFont.TextStyle.callout,
-                          UIFont.TextStyle.caption1,
-                          UIFont.TextStyle.caption2,
-                          UIFont.TextStyle.footnote,
-                          UIFont.TextStyle.headline,
-                          UIFont.TextStyle.largeTitle,
-                          UIFont.TextStyle.subheadline,
-                          UIFont.TextStyle.title1,
-                          UIFont.TextStyle.title2,
-                          UIFont.TextStyle.title3]
-        
-        textStyles.forEach
-        {
-            // when
-            sut.setUpContentWith(text: descriptionText,
-                                 aligned: .center,
-                                 andStyledAs: $0)
-            
-            // then
-            XCTAssertEqual(sut.contentText.font,
-                           UIFont.preferredFont(forTextStyle: $0),
-                           "Text Style is incorrect for \($0)")
-        }
-    }
-    
     
     // MARK: - Testing func setUpAccessibilityWith(identifier:text:andHint)
     

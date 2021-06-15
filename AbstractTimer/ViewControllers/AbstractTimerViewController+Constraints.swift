@@ -153,7 +153,7 @@ extension AbstractTimerViewController
      - Parameter largest: should the label take the whole available space
      - Returns: NA
     */
-    func setLabelConstraintsFor(_ shape: HasTextContent, asLargeAsPossible largest: Bool = true)
+    func setLabelConstraintsFor(_ shape: HasCompleteAccessibility, asLargeAsPossible largest: Bool = true)
     {
         shape.contentText.snp.makeConstraints
         {
