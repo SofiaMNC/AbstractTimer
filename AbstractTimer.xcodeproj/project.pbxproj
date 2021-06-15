@@ -12,6 +12,7 @@
 		C39270332677ECB5008FCF27 /* RectangleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39270322677ECB5008FCF27 /* RectangleTests.swift */; };
 		C39270362677F4A7008FCF27 /* SquareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39270352677F4A7008FCF27 /* SquareTests.swift */; };
 		C392703E267849A1008FCF27 /* AbstractTimerViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C392703D267849A1008FCF27 /* AbstractTimerViewModelTests.swift */; };
+		C39270402678521A008FCF27 /* DeliverableScenarioInAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C392703F2678521A008FCF27 /* DeliverableScenarioInAction.swift */; };
 		C3A98B3B2672A52900770D63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A98B3A2672A52900770D63 /* AppDelegate.swift */; };
 		C3A98B3D2672A52900770D63 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A98B3C2672A52900770D63 /* SceneDelegate.swift */; };
 		C3A98B3F2672A52900770D63 /* AbstractTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A98B3E2672A52900770D63 /* AbstractTimerViewController.swift */; };
@@ -53,6 +54,7 @@
 		C39270322677ECB5008FCF27 /* RectangleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleTests.swift; sourceTree = "<group>"; };
 		C39270352677F4A7008FCF27 /* SquareTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareTests.swift; sourceTree = "<group>"; };
 		C392703D267849A1008FCF27 /* AbstractTimerViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractTimerViewModelTests.swift; sourceTree = "<group>"; };
+		C392703F2678521A008FCF27 /* DeliverableScenarioInAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliverableScenarioInAction.swift; sourceTree = "<group>"; };
 		C3A98B372672A52900770D63 /* AbstractTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AbstractTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3A98B3A2672A52900770D63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3A98B3C2672A52900770D63 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				C3A98B5C2672A52A00770D63 /* AbstractTimerUITests.swift */,
+				C392703F2678521A008FCF27 /* DeliverableScenarioInAction.swift */,
 				C3A98B5E2672A52A00770D63 /* Info.plist */,
 			);
 			path = AbstractTimerUITests;
@@ -392,6 +395,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C39270402678521A008FCF27 /* DeliverableScenarioInAction.swift in Sources */,
 				C3A98B5D2672A52A00770D63 /* AbstractTimerUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
