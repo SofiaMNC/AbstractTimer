@@ -79,10 +79,10 @@ class AbstractTimerViewControllerTests: XCTestCase
         XCTAssertEqual(redSquare.contentText.textAlignment, .left,
                        "Red square's alignment is incorrect")
         
-        XCTAssertTrue(redSquare.contentText.accessibilityLabel != nil,
+        XCTAssertTrue(redSquare.accessibilityLabel != nil,
                        "Red square's accessibility label is not set")
         
-        XCTAssertEqual(redSquare.contentText.accessibilityLabel,
+        XCTAssertEqual(redSquare.accessibilityLabel,
                        StringConstants.MainScreen.RedSquare.accessibilityLabel,
                        "Red square's accessibility label is incorrect")
         
@@ -117,17 +117,17 @@ class AbstractTimerViewControllerTests: XCTestCase
         XCTAssertEqual(whiteRectangle.contentText.textAlignment, .center,
                        "White rectangle's alignment is incorrect")
         
-        XCTAssertTrue(whiteRectangle.contentText.accessibilityLabel != nil,
+        XCTAssertTrue(whiteRectangle.accessibilityLabel != nil,
                        "White Rectangle's accessibility label is not set")
         
-        XCTAssertEqual(whiteRectangle.contentText.accessibilityLabel,
+        XCTAssertEqual(whiteRectangle.accessibilityLabel,
                        StringConstants.MainScreen.WhiteRectangle.accessibilityLabel,
                        "White Rectangle's accessibility label is incorrect")
         
-        XCTAssertTrue(whiteRectangle.contentText.accessibilityHint != nil,
+        XCTAssertTrue(whiteRectangle.accessibilityHint != nil,
                        "White Rectangle's accessibility hint is not set")
         
-        XCTAssertEqual(whiteRectangle.contentText.accessibilityHint,
+        XCTAssertEqual(whiteRectangle.accessibilityHint,
                        StringConstants.MainScreen.WhiteRectangle.accessibilityHint,
                        "White Rectangle's accessibility hint is incorrect")
     }
@@ -156,17 +156,17 @@ class AbstractTimerViewControllerTests: XCTestCase
         XCTAssertEqual(purpleRectangle.contentText.textAlignment, .center,
                        "Purple rectangle's alignment is incorrect")
         
-        XCTAssertTrue(purpleRectangle.contentText.accessibilityLabel != nil,
+        XCTAssertTrue(purpleRectangle.accessibilityLabel != nil,
                        "Purple Rectangle's accessibility label is not set")
         
-        XCTAssertEqual(purpleRectangle.contentText.accessibilityLabel,
+        XCTAssertEqual(purpleRectangle.accessibilityLabel,
                        StringConstants.MainScreen.PurpleRectangle.accessibilityLabel,
                        "Purple Rectangle's accessibility label is incorrect")
         
-        XCTAssertTrue(purpleRectangle.contentText.accessibilityHint != nil,
+        XCTAssertTrue(purpleRectangle.accessibilityHint != nil,
                        "Purple Rectangle's accessibility hint is not set")
         
-        XCTAssertEqual(purpleRectangle.contentText.accessibilityHint,
+        XCTAssertEqual(purpleRectangle.accessibilityHint,
                        StringConstants.MainScreen.PurpleRectangle.accessibilityHint,
                        "Purple Rectangle's accessibility hint is incorrect")
     }
@@ -195,10 +195,10 @@ class AbstractTimerViewControllerTests: XCTestCase
         XCTAssertEqual(blueSquare.contentText.textAlignment, .right,
                        "Blue square's alignment is incorrect")
         
-        XCTAssertTrue(blueSquare.contentText.accessibilityLabel != nil,
+        XCTAssertTrue(blueSquare.accessibilityLabel != nil,
                        "Blue square's accessibility label is not set")
         
-        XCTAssertEqual(blueSquare.contentText.accessibilityLabel,
+        XCTAssertEqual(blueSquare.accessibilityLabel,
                        StringConstants.MainScreen.BlueSquare.accessibilityLabel,
                        "Blue square's accessibility label is incorrect")
         

@@ -124,8 +124,8 @@ class RectangleTests: XCTestCase
                        accessibilityID,
                        "Accessibility ID is incorrect")
         
-        XCTAssertTrue(sut.contentText.isAccessibilityElement,
-                      "ContentElement not accessible")
+        XCTAssertTrue(sut.isAccessibilityElement,
+                      "Element not accessible")
     }
     
     func testAccessibilityLabelIsSetCorrectly()
@@ -137,10 +137,10 @@ class RectangleTests: XCTestCase
                                    text: accessibilityLabelText)
         
         // then
-        XCTAssertTrue(sut.contentText.accessibilityLabel != nil,
+        XCTAssertTrue(sut.accessibilityLabel != nil,
                       "Accessibility Label is not set")
         
-        XCTAssertEqual(sut.contentText.accessibilityLabel, accessibilityLabelText,
+        XCTAssertEqual(sut.accessibilityLabel, accessibilityLabelText,
                        "Accessibility Label is incorrect")
         
     }
@@ -155,10 +155,10 @@ class RectangleTests: XCTestCase
                                    andHint: accessibilityHintText)
         
         // then
-        XCTAssertTrue(sut.contentText.accessibilityHint != nil,
+        XCTAssertTrue(sut.accessibilityHint != nil,
                       "Accessibility Hint is not set")
         
-        XCTAssertEqual(sut.contentText.accessibilityHint, accessibilityHintText,
+        XCTAssertEqual(sut.accessibilityHint, accessibilityHintText,
                        "Accessibility Hint is incorrect")
         
     }

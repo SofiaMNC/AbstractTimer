@@ -13,7 +13,7 @@ import Foundation
 import UIKit
 
 
-class Rectangle: UIView, HasAccessibleTextContent
+class Rectangle: UIView, HasTextContent, HasCompleteAccessibility
 {
     // MARK: - Properties
     
@@ -81,7 +81,7 @@ class Rectangle: UIView, HasAccessibleTextContent
     }
     
     /**
-    Set up accessibility of the content by providing minimum accessibility information.
+    Set up accessibility of the Rectangle by providing minimum accessibility information.
         - Parameter ID: the string to use as accessiblity identifier
         - Parameter label: the string to use as accessibility label
         - Parameter hint: the string to use as accessibility hint
@@ -90,8 +90,8 @@ class Rectangle: UIView, HasAccessibleTextContent
     func setUpAccessibilityWith(identifier ID: String, text label: String, andHint hint: String = "")
     {
         self.accessibilityIdentifier = ID
-        contentText.isAccessibilityElement = true
-        contentText.accessibilityLabel = label
-        contentText.accessibilityHint = hint
+        self.accessibilityLabel = label
+        self.accessibilityHint = hint
+        self.isAccessibilityElement = true
     }
 }

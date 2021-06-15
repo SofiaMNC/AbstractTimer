@@ -20,7 +20,6 @@ class AbstractTimerUITests: XCTestCase
     
     var redSquare: XCUIElement!
     var whiteRectangle: XCUIElement!
-    var whiteRectangleLabel: XCUIElement!
     var purpleRectangle: XCUIElement!
     var blueSquare: XCUIElement!
     
@@ -39,7 +38,6 @@ class AbstractTimerUITests: XCTestCase
         whiteRectangle = app.otherElements["WhiteRectangle"]
         purpleRectangle = app.otherElements["PurpleRectangle"]
         blueSquare = app.otherElements["BlueSquare"]
-        whiteRectangleLabel = app.staticTexts["White Rectangle (20 offset). Can be longpressed"]
 
         app.launch()
     }
@@ -52,7 +50,7 @@ class AbstractTimerUITests: XCTestCase
         XCTAssertTrue(redSquare.exists)
 
         XCTAssertTrue(whiteRectangle.exists)
-
+        
         XCTAssertTrue(purpleRectangle.exists)
 
         XCTAssertTrue(blueSquare.exists)
@@ -87,10 +85,9 @@ class AbstractTimerUITests: XCTestCase
         XCTAssertEqual(purpleRectangle.frame.origin.x, whiteRectangle.frame.origin.x + spacingValue,
                        "Purple Rectangle is positioned incorrectly on X-axis.")
         
-        let whiteRectangleLabelEndPointY = whiteRectangleLabel.frame.origin.y + whiteRectangleLabel.frame.height
-        XCTAssertEqual(Int(purpleRectangle.frame.origin.y), Int(whiteRectangleLabelEndPointY + spacingValue),
+        XCTAssertLessThan(whiteRectangle.frame.origin.y + whiteRectangle.frame.height / 2 + spacingValue, purpleRectangle.frame.origin.y,
                        "Purple Rectangle is positioned incorrectly on Y-axis.")
-
+        
     }
     
     func testPurpleViewVisibiliyOnDeviceRotationIsCorrect()
@@ -135,7 +132,6 @@ class AbstractTimerUITests: XCTestCase
         /// Test White Rectangle's position with regards to Blue Square
         let whiteRectangleEndPointX = whiteRectangle.frame.origin.x + whiteRectangle.frame.width
         let whiteRectangleEndPointY = whiteRectangle.frame.origin.y + whiteRectangle.frame.height
-        let whiteRectangleLabelEndPointY = whiteRectangleLabel.frame.origin.y + whiteRectangleLabel.frame.height
         
         XCTAssertEqual(whiteRectangleEndPointX, blueSquare.frame.origin.x,
                        "White Rectangle's width is incorrect with regards to Blue Square")
@@ -147,8 +143,9 @@ class AbstractTimerUITests: XCTestCase
         XCTAssertEqual(whiteRectangle.frame.origin.x + spacingValue, purpleRectangle.frame.origin.x,
                        "Purple Rectangle is not properly positioned on the X-axis with regards to White Rectangle's label")
         
-        XCTAssertEqual(Int(whiteRectangleLabelEndPointY + spacingValue), Int(purpleRectangle.frame.origin.y),
-                       "Purple Rectangle is not properly positioned on the Y-axis with regards to White Rectangle's label")
+        XCTAssertLessThanOrEqual(whiteRectangle.frame.origin.y + whiteRectangle.frame.height / 2 + spacingValue,
+                                 purpleRectangle.frame.origin.y,
+                                 "Purple Rectangle is not properly positioned on the Y-axis with regards to White Rectangle's label")
         
         let purpleRectangleEndPointX = purpleRectangle.frame.origin.x + purpleRectangle.frame.width
         let purpleRectangleEndPointY = purpleRectangle.frame.origin.y + purpleRectangle.frame.height
@@ -188,7 +185,6 @@ class AbstractTimerUITests: XCTestCase
         /// Test White Rectangle's position with regards to Blue Square
         let whiteRectangleEndPointX = whiteRectangle.frame.origin.x + whiteRectangle.frame.width
         let whiteRectangleEndPointY = whiteRectangle.frame.origin.y + whiteRectangle.frame.height
-        let whiteRectangleLabelEndPointY = whiteRectangleLabel.frame.origin.y + whiteRectangleLabel.frame.height
         
         XCTAssertEqual(whiteRectangleEndPointX, blueSquare.frame.origin.x,
                        "White Rectangle's width is incorrect with regards to Blue Square")
@@ -200,8 +196,9 @@ class AbstractTimerUITests: XCTestCase
         XCTAssertEqual(whiteRectangle.frame.origin.x + spacingValue, purpleRectangle.frame.origin.x,
                        "Purple Rectangle is not properly positioned on the X-axis with regards to White Rectangle's label")
         
-        XCTAssertEqual(Int(whiteRectangleLabelEndPointY + spacingValue), Int(purpleRectangle.frame.origin.y),
-                       "Purple Rectangle is not properly positioned on the Y-axis with regards to White Rectangle's label")
+        XCTAssertLessThanOrEqual(whiteRectangle.frame.origin.y + whiteRectangle.frame.height / 2 + spacingValue,
+                                 purpleRectangle.frame.origin.y,
+                                 "Purple Rectangle is not properly positioned on the Y-axis with regards to White Rectangle's label")
         
         let purpleRectangleEndPointX = purpleRectangle.frame.origin.x + purpleRectangle.frame.width
         let purpleRectangleEndPointY = purpleRectangle.frame.origin.y + purpleRectangle.frame.height

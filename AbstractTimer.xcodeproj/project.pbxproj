@@ -27,7 +27,7 @@
 		C3A98B722672BCAD00770D63 /* AbstractTimerViewController+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A98B712672BCAD00770D63 /* AbstractTimerViewController+Constraints.swift */; };
 		C3A98B792676496300770D63 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C3A98B7B2676496300770D63 /* Localizable.strings */; };
 		C3A98B7E2676605C00770D63 /* StringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A98B7D2676605C00770D63 /* StringConstants.swift */; };
-		C3A98B842676AB0000770D63 /* HasAccessibleTextContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A98B832676AB0000770D63 /* HasAccessibleTextContent.swift */; };
+		C3A98B842676AB0000770D63 /* HasCompleteAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A98B832676AB0000770D63 /* HasCompleteAccessibility.swift */; };
 		C3A98B862676B2A900770D63 /* HasTextContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A98B852676B2A900770D63 /* HasTextContent.swift */; };
 /* End PBXBuildFile section */
 
@@ -77,7 +77,7 @@
 		C3A98B7A2676496300770D63 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C3A98B7C2676497800770D63 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C3A98B7D2676605C00770D63 /* StringConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConstants.swift; sourceTree = "<group>"; };
-		C3A98B832676AB0000770D63 /* HasAccessibleTextContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasAccessibleTextContent.swift; sourceTree = "<group>"; };
+		C3A98B832676AB0000770D63 /* HasCompleteAccessibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasCompleteAccessibility.swift; sourceTree = "<group>"; };
 		C3A98B852676B2A900770D63 /* HasTextContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasTextContent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -222,7 +222,7 @@
 		C3A98B872676B38600770D63 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				C3A98B832676AB0000770D63 /* HasAccessibleTextContent.swift */,
+				C3A98B832676AB0000770D63 /* HasCompleteAccessibility.swift */,
 				C3A98B852676B2A900770D63 /* HasTextContent.swift */,
 			);
 			path = Protocols;
@@ -372,7 +372,7 @@
 				C3A98B7E2676605C00770D63 /* StringConstants.swift in Sources */,
 				C3A98B862676B2A900770D63 /* HasTextContent.swift in Sources */,
 				C39270002677A00F008FCF27 /* Box.swift in Sources */,
-				C3A98B842676AB0000770D63 /* HasAccessibleTextContent.swift in Sources */,
+				C3A98B842676AB0000770D63 /* HasCompleteAccessibility.swift in Sources */,
 				C3A98B3B2672A52900770D63 /* AppDelegate.swift in Sources */,
 				C3926FFD26779E8E008FCF27 /* AbstractTimerViewModel.swift in Sources */,
 				C3A98B702672ACC200770D63 /* Square.swift in Sources */,
