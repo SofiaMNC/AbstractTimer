@@ -1,4 +1,4 @@
-# **Abstract Timer**
+# **Awesome Abstract Timer**
 *Sofia Chevrolat (June 2021)*
 
 [![forthebadge](https://forthebadge.com/images/badges/made-with-swift.svg)](https://forthebadge.com)
